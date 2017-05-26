@@ -43,7 +43,11 @@ export default class Geolocation extends React.Component {
     return (
       <View>
         <Text>Current position</Text>
-        <Text>{`latitude: ${JSON.stringify(this.state.lat)}, longitude: ${JSON.stringify(this.state.lng)}`}</Text>
+        {
+          this.state.errorMessage ?
+          <Text>Error: {this.state.errorMessage}</Text> :
+          <Text>{`latitude: ${JSON.stringify(this.state.lat)}, longitude: ${JSON.stringify(this.state.lng)}`}</Text>
+        }
       </View>
     );
   }
