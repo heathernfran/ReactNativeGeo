@@ -6,8 +6,8 @@ export default class Geolocation extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      lat: '0',
-      lng: '0',
+      lat: 0,
+      lng: 0,
       errorMessage: null,
     };
   }
